@@ -11,3 +11,26 @@ var triangleTest = function(sideA, sideB, sideC) {
     return false;
     }
 };
+
+$(document).ready(function() {
+  $("form#triangle-test").submit(function(event) {
+    var sideA = parseInt($('input#sideA').val());
+    var sideB = parseInt($('input#sideB').val());
+    var sideC = parseInt($('input#sideC').val());
+    var output = triangleTest(sideA, sideB, sideC);
+
+    $(".sideA").text(sideA);
+    $(".sideB").text(sideB);
+    $(".sideC").text(sideC);
+    $(".not").text("");
+
+    if (!output) {
+      $(".not").text("not at all a");
+    } else {
+      $('.output').text(output);
+    }
+
+    $("#result").show();
+    event.preventDefault();
+  });
+});
