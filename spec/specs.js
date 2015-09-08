@@ -11,4 +11,9 @@ describe('triangleTest', function() {
   it("is an equilateral", function() {
     expect(triangleTest(3, 3, 3)).to.equal("equilateral");
   });
+
+  it("is an isosceles", function() {
+    expect(triangleTest(8,8,6)).to.equal("isosceles");
+  });
+  
 });
