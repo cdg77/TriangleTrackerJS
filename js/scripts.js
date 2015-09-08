@@ -4,10 +4,10 @@ var triangleTest = function(sideA, sideB, sideC) {
       return "equilateral";
     } else if ((sideA === sideB) || (sideB === sideC) || (sideA === sideC)) {
       return "isosceles";
-    } else {
-        return true;
+    } else if ((sideA !== sideB) && (sideB !== sideC) && (sideA !== sideC)) {
+      return "scalene";
       }
   } else {
     return false;
-  }
+    }
 };
